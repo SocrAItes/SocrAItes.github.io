@@ -14,7 +14,7 @@
                                     <img src="{{ item.logo | relative_url }}" alt="{{ item.name }}" style="width: 18px;" class="mr-1 mt-1">
                                     {% endif %}
                                     <div class="media-body">
-                                        <div>{{ item.name }}</div>
+                                        <div class="{{ item.name_class }}">{{ item.name }}</div>
                                         <div class="small">{{ item.dept }}</div>
                                         <div class="small d-flex">
                                             <div>{{ item.position }}</div>

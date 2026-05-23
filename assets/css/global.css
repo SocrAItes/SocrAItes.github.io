@@ -92,3 +92,9 @@ div.lazy {
     font-family: Source Code Pro, monospace;
     white-space: nowrap;
 }
+
+.education-name-long {
+    font-size: 0.78rem;
+    line-height: 1.2;
+    white-space: nowrap;
+}
