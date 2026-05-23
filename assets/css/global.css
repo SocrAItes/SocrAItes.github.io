@@ -90,4 +90,5 @@ div.lazy {
 
 .email-text {
     font-family: Source Code Pro, monospace;
+    white-space: nowrap;
 }
