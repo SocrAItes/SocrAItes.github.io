@@ -94,7 +94,8 @@ div.lazy {
 }
 
 .education-name-long {
-    font-size: 0.74rem;
+    display: block;
     line-height: 1.2;
+    max-width: 100%;
     white-space: nowrap;
 }
