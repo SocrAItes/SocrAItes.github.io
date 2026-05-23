@@ -93,8 +93,12 @@ div.lazy {
     white-space: nowrap;
 }
 
+.education-detail-line {
+    max-width: 100%;
+}
+
 .education-name-long {
-    display: block;
+    display: inline-block;
     line-height: 1.2;
     max-width: 100%;
     white-space: nowrap;

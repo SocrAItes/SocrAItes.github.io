@@ -1,6 +1,7 @@
 // aHR0cHM6Ly9naXRodWIuY29tL2x1b3N0MjYvYWNhZGVtaWMtaG9tZXBhZ2U=
 $(function () {
     function fitSingleLineText(element) {
+        element.style.fontSize = "";
         var parentWidth = element.parentElement.clientWidth;
         if (!parentWidth) {
             return;
@@ -31,15 +32,32 @@ $(function () {
         document.querySelectorAll(".education-name-long").forEach(fitSingleLineText);
     }
 
+    function alignEducationDetailLines() {
+        var targetWidth = 0;
+        document.querySelectorAll(".education-name-long").forEach(function (element) {
+            targetWidth = Math.max(targetWidth, element.getBoundingClientRect().width);
+        });
+
+        document.querySelectorAll(".education-detail-line").forEach(function (element) {
+            var availableWidth = element.parentElement.clientWidth;
+            element.style.width = Math.min(targetWidth, availableWidth) + "px";
+        });
+    }
+
+    function updateEducationLayout() {
+        fitSingleLineTexts();
+        alignEducationDetailLines();
+    }
+
     var fitResizeTimer = null;
     window.addEventListener("resize", function () {
         window.clearTimeout(fitResizeTimer);
-        fitResizeTimer = window.setTimeout(fitSingleLineTexts, 100);
+        fitResizeTimer = window.setTimeout(updateEducationLayout, 100);
     });
 
-    fitSingleLineTexts();
+    updateEducationLayout();
     if (document.fonts && document.fonts.ready) {
-        document.fonts.ready.then(fitSingleLineTexts);
+        document.fonts.ready.then(updateEducationLayout);
     }
 
     lazyLoadOptions = {
