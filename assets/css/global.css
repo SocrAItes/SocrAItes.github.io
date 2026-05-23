@@ -90,16 +90,4 @@ div.lazy {
 
 .email-text {
     font-family: Source Code Pro, monospace;
-    white-space: nowrap;
-}
-
-.education-detail-line {
-    max-width: 100%;
-}
-
-.education-name-long {
-    display: inline-block;
-    line-height: 1.2;
-    max-width: 100%;
-    white-space: nowrap;
 }
