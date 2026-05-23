@@ -1,9 +1,8 @@
 // aHR0cHM6Ly9naXRodWIuY29tL2x1b3N0MjYvYWNhZGVtaWMtaG9tZXBhZ2U=
 $(function () {
     function fitSingleLineText(element) {
-        element.style.fontSize = "";
-        var availableWidth = element.clientWidth;
-        if (!availableWidth) {
+        var parentWidth = element.parentElement.clientWidth;
+        if (!parentWidth) {
             return;
         }
 
@@ -18,7 +17,7 @@ $(function () {
         for (var i = 0; i < 12; i++) {
             var mid = (low + high) / 2;
             element.style.fontSize = mid + "px";
-            if (element.scrollWidth <= availableWidth) {
+            if (element.scrollWidth <= parentWidth) {
                 low = mid;
             } else {
                 high = mid;

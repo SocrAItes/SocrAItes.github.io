@@ -93,21 +93,6 @@ div.lazy {
     white-space: nowrap;
 }
 
-.education-heading {
-    align-items: baseline;
-    display: flex;
-    gap: 0.75rem;
-}
-
-.education-name {
-    min-width: 0;
-}
-
-.education-date {
-    flex: 0 0 auto;
-    margin-left: auto;
-}
-
 .education-name-long {
     display: block;
     line-height: 1.2;
