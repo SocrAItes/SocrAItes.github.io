@@ -97,6 +97,7 @@ div.lazy {
     align-items: baseline;
     display: flex;
     gap: 0.75rem;
+    width: 100%;
 }
 
 .education-name {
@@ -106,6 +107,7 @@ div.lazy {
 .education-date {
     flex: 0 0 auto;
     margin-left: auto;
+    text-align: right;
 }
 
 .education-name-long {
